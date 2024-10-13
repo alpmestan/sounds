@@ -1,0 +1,30 @@
+cabal-version:      3.0
+name:               sounds
+version:            0.1
+-- synopsis:
+-- description:
+license:            BSD-3-Clause
+license-file:       LICENSE
+author:             Alp Mestanogullari
+maintainer:         alpmestan@gmail.com
+-- copyright:
+category:           Sound
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+-- extra-source-files:
+
+common warnings
+    ghc-options: -Wall
+
+executable sounds
+    import:           warnings
+    main-is:          Main.hs
+    -- other-modules:
+    -- other-extensions:
+    build-depends:    base, lambdasound, plots, massiv, diagrams-rasterific, linear, diagrams-lib, random, deque
+    hs-source-dirs:   exe
+    default-language: GHC2021
+    default-extensions:
+        DuplicateRecordFields,
+        OverloadedRecordDot,
+        NoFieldSelectors
